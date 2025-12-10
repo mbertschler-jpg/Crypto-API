@@ -1,0 +1,25 @@
+date,index,name,ticker,market_cap
+2016-01-18,1,Bitcoin,BTC,$ 5.82B
+2016-01-18,2,XRP,XRP,$ 178.88M
+2016-01-18,3,Litecoin,LTC,$ 134.19M
+2016-01-18,4,Ethereum,ETH,$ 109.46M
+2016-01-18,5,Dash,DASH,$ 26.94M
+2016-01-18,6,Dogecoin,DOGE,$ 15.48M
+2016-01-18,7,Peercoin,PPC,$ 9.23M
+2016-01-18,8,Stellar,XLM,$ 8.22M
+2016-01-18,9,BitShares,BTS,$ 7.69M
+2016-01-18,10,Namecoin,NMC,$ 5.32M
+2016-01-18,11,Monero,XMR,$ 5.29M
+2016-01-18,12,NEM,XEM,$ 3.07M
+2016-01-18,13,MonaCoin,MONA,$ 1.78M
+2016-01-18,14,Tether,USDT,$ 1.45M
+2016-01-18,15,Novacoin,NVC,$ 1.01M
+2016-01-18,16,EarthCoin,EAC,$ 1.01M
+2016-01-18,17,Primecoin,XPM,"$ 848,365"
+2016-01-18,18,Quark,QRK,"$ 774,587"
+2016-01-18,19,DigiByte,DGB,"$ 704,441"
+2016-01-18,20,WorldCoin,WDC,"$ 643,218"
+2016-01-18,21,ReddCoin,RDD,"$ 594,882"
+2016-01-18,22,Vertcoin,VTC,"$ 455,058"
+2016-01-18,23,Zetacoin,ZET,"$ 314,443"
+2016-01-18,24,Feathercoin,FTC,"$ 308,738"

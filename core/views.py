@@ -25,11 +25,33 @@ def get_crypto_data(request):
 
     try:
         coins_data = scrape_crypto_data(formatted_date)
+
     except Exception as e:
-        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # >>> NEW: print backend error for debugging <<<
+        print(f"[ERROR] scrape_crypto_data failed for date {formatted_date}: {str(e)}")
+
+        # >>> NEW: return clearer API error message <<<
+        return Response(
+            {"error": f"Failed to fetch crypto data: {str(e)}"},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+    # >>> NEW: Validate API returned a list <<<
+    if not isinstance(coins_data, list):
+        print(f"[ERROR] Invalid data structure returned: {type(coins_data)}")
+        return Response(
+            {"error": "Scraper returned invalid data structure. Expected a list."},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
     # Filter out entries with null values
-    filtered_coins_data = [coin for coin in coins_data if any(value is not None for value in coin.values())]
+    filtered_coins_data = [
+        coin for coin in coins_data
+        if isinstance(coin, dict) and any(value is not None for value in coin.values())
+    ]
+
+    # >>> NEW: Debug print how many records survived filtering <<<
+    print(f"[INFO] Received {len(coins_data)} coins, returning {len(filtered_coins_data)} after filtering.")
 
     # Serialize the data
     serializer = CryptoDataSerializer(filtered_coins_data, many=True)
