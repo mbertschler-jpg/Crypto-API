@@ -9,8 +9,8 @@ API_URL = "http://127.0.0.1:8000/api/get-crypto-data/"
 # -----------------------------
 # Date range
 # -----------------------------
-start = dt.date(2021, 2, 6)
-end   = dt.date(2021, 2, 20)
+start = dt.date(2021, 3, 17)
+end   = dt.date(2021, 4, 1)
 
 # -----------------------------
 # Output folder
